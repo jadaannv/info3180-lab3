@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2> Contact Form </h2>
+
+<div>
+    <p> Fill in this form to contact the site owners.</p>
+</div>
+
+<form method = "POST" action="{{url_for('contact')}}" novalidate>
+    <!-- secure the form-->
+    {{form.csrf_token}}
+
+    <div class = "newform">
+        {{form.username.label(class="field-label")}} <span class="required">(Required)</span>
+        <p class="label">Please enter your full name</p>
+        {{form.username(class="newform")}}
+    </div>
+
+    <br>
+
+    <div class = "newform">
+        {{form.email.label(class="field-label")}} <span class="required">(Required)</span>
+        <p class="label">Please enter your email address</p>
+        {{form.email(class="newform")}}
+    </div>
+
+    <br>
+
+    <div class = "newform">
+        {{form.subject.label(class="field-label")}} <span class="required">(Required)</span>
+        <p class="label">Please enter a subject for your message.</p>
+        {{form.subject(class="newform")}}
+    </div>
+
+    <br>
+
+    <div class = "newform">
+        {{form.message.label(class="field-label")}} <span class="required">(Required)</span>
+        <p class="label">Please enter the message you would like to send.</p>
+        {{form.message(class="newform")}}
+    </div>
+
+    <br>
+
+    <button type ="submit" class="submit"> Send </button>
+
+</form>
+
+{% endblock %}

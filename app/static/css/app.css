@@ -1,3 +1,35 @@
 body {
     padding-top: 5rem;
 }
+
+.required{
+    color: red;
+}
+
+.label{
+    padding-top: 10px;
+}
+
+.newform{
+    width: 400px;
+}
+
+button{
+    border-radius: 8px;
+    box-shadow: 5%;
+    color: white;
+    background-color: rgb(30, 163, 240);
+    border: none;
+    font-size: 16px;
+    padding: 5px 25px;
+}
+
+li{
+    list-style: none;
+}
+
+.flashes{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10%;
+}
